@@ -1,0 +1,385 @@
+.no-scroll{
+  overflow: hidden;
+
+}
+.not-scroll{
+  overflow: hidden;
+}
+
+
+.r-footer {
+  display: none;
+}
+
+.ritch-article {
+  display: none;
+}
+
+.copy-modal {
+  display: none;
+}
+
+.ritch-table {
+  display: none;
+}
+
+/*480px以下*/
+
+@media screen and (max-width: 480px) {
+  /*必要ならばここにコードを書く*/
+  /* ==========================フッター自体========================== */
+  .footer {
+    position: relative;
+    z-index: -3;
+  }
+  .r-footer {
+    display: block;
+    position: fixed;
+    z-index: 600 !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    box-sizing: border-box;
+    background: #445671;
+    padding: 0 0 15px 0;
+  }
+  .r-footer-ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+  }
+  .r-footer-li {
+    width: 25%;
+    height: 54px;
+    box-sizing: border-box;
+    border-right: 1px #bbb solid;
+    cursor: pointer;
+    color: #bbb;
+    position: relative;
+  }
+  .js-copy-url {
+    display: none;
+  }
+  .copy-txt, .custom-table, .top, .article-btn {
+    color: #FFFFFF;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: 'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic Pro', 'Osaka', sans-serif;
+    font-size: 12px;
+  }
+  .copy-txt.kesu, .custom-table.kesu, .top.kesu {
+    display: none;
+  }
+  .article-btn.kesu {
+    display: none;
+  }
+  .close-table {
+    display: none;
+  }
+  .close-article {
+    display: none;
+  }
+  .close-article.dasu, .close-table.dasu {
+    display: block;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic Pro', 'Osaka', sans-serif;
+    margin-top: 2px;
+  }
+  /* ==========================関連記事========================== */
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 200;
+  overflow: hidden;
+  transition: .3s;
+
+}
+
+.overlay.cover{
+  left: 0;
+  transition: .3s;
+}
+
+  .ritch-article {
+    display: block;
+    overflow: scroll;
+    overflow-x: hidden;
+    min-height: 94.3vh;
+    width: 80%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    z-index: 8;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #fff;
+    transition: .3s;
+  }
+
+  .ritch-article.slidein {
+    transform: translateX(125%);
+    transition: .3s;
+  }
+
+  .relPostWrap {
+    height: auto;
+  }
+  .title {
+    line-height: 56px;
+  }
+  .kanren {
+    color: #203A43;
+    margin-left: 18px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 28px;
+    position: relative;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .kanren-list {
+    color: #333;
+    margin-left: 18px;
+    font-size: 28px;
+    position: relative;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .kanren::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    height: 2px;
+    width: 260px;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364,  #060d0f,rgb(129, 124, 124)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  .kanren-list::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    height: 2px;
+    width: 260px;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364,  #060d0f,rgb(129, 124, 124)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  .kanren .paper {
+    width: 30px;
+    height: 30px;
+  }
+  .relPostWrap ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 30px;
+    color: rgb(17,17,204);
+  }
+  .category-chan{
+    color: rgb(17,17,204);
+    text-decoration: none;
+    font-size: 16px;
+
+  }
+
+  .category-list li a{
+    font-size: 16px;
+  }
+  .ritch-article-txt {
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+  }
+ 
+  .nothing {
+    position: relative;
+    z-index: 60;
+    color: #333;
+    width: 300px;
+    text-align: center;
+    line-height: 42px;
+  }
+  /* ==========================URLコピー========================== */
+  .copy-modal {
+    display: block;
+    width: 270px;
+    height: 150px;
+    background: #333;
+    position: fixed;
+    border-radius: 5px;
+    top: 40%;
+    left: 50%;
+    z-index: 0;
+    transform: translateX(-50%);
+    transition: .3s;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+  }
+  .copy-modal.fadein {
+    opacity: 1;
+    z-index: 50;
+    transition: .3s;
+  }
+  .copy-modal-txt {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+  }
+  /* ==========================目次========================== */
+  /* .ritch-table {
+    display: block;
+    position: fixed;
+    z-index: -50;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 850px;
+    opacity: 0;
+    transition: .7s;
+  } */
+  .ritch-table.fadein {
+    opacity: 1;
+    transition: .5s;
+    z-index: 20;
+  }
+  .rtoc-mokuji-content{
+    opacity: 0;
+    max-height: 78vh;
+    width: 90%;
+    transform: translateX(-50%);
+    z-index: -50;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 8px;
+    overflow-x: hidden;
+    overflow: auto;
+
+  }
+
+
+  .rtoc-mokuji-content.frame2::before, .rtoc-mokuji-content.frame3, .rtoc-mokuji-content.frame4, .rtoc-mokuji-content.frame5 {
+    height: auto;
+  }
+  
+  .rtoc-mokuji-content::after {
+    content: '✖️';
+    position: absolute;
+    z-index: 30;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  
+  .rtoc-mokuji-content.hyouji{
+    position: fixed;
+    opacity: 1;
+    transition: .3s;
+    z-index: 101;
+  }
+  .rtoc-mokuji-content.frame1,
+  .rtoc-mokuji-content.frame2,
+  .rtoc-mokuji-content.frame3,
+  .rtoc-mokuji-content.frame4,
+  .rtoc-mokuji-content.frame5{
+    position: fixed;
+  }
+  /* 隠す */
+  .js-black {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0;
+    transition: .6s;
+    z-index: -50;
+    overflow: hidden;
+  }
+  .js-black.haikei {
+    opacity: 1;
+    position: fixed;
+    z-index: 100;
+    transition: 1s;
+    overflow: hidden;
+  }
+  .rtoc_open_close {
+    display: none;
+  }
+  /* アイコン達 */
+  .copy, .paper, .mokuji-bar, .top-up-arrow {
+    /* height: 16px; */
+    position: absolute;
+    bottom: 15px;
+    height: 15px;
+    width: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+  }
+  .kanren-paper {
+    color: rgb(37, 124, 238);
+  }
+  .batu {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 16px;
+  }
+  .fa.fa-remove.mokuji-batu.fa-2x {
+    opacity: 0;
+    position: fixed;
+    z-index: 80;
+    top: 24px;
+    right: 24px;
+    width: 16px;
+  }
+  .fa.fa-remove.mokuji-batu.fa-2x.fade {
+    opacity: 1;
+    transition: 6s;
+    animation-delay: 2s;
+  }
+
+  .fade {
+
+    opacity : 0;
+  
+    transform: translateY(20px);
+  
+    transition: all 1s;
+  
+  }
+
+
+  }
+
+  /* ここは納品前に消す */
+
+
+.drawer-hamburger {
+  display: none;
+}
+
+.main-header-clone-show {
+  display: none;
+}
+.back-to-top{
+  display: none;
+}
